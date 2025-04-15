@@ -37,13 +37,12 @@ jobs:
           haxelib setup ~/haxelib
           haxelib install hmm --quiet
           haxelib run hmm install --quiet
-          sh ./setup/unix.sh
       - name: Skip SScript setup mode
         run: echo 'oy9:showMacroty8:loopCosti25y10:includeAllfg' >> ~/settings.cocoa
       - name: Create Version Tag
         run: echo "${{github.run_id}}" > VERSION
       - name: Compile
-        run: haxelib run lime build Project.xml linux --app-version="4.0.0-${{ github.run_id}}" -DFEATURE_STAGE_EDITOR -DFEATURE_GHOST_TAPPING
+        run: haxelib run lime build Project.xml linux -DFEATURE_STAGE_EDITOR -DFEATURE_GHOST_TAPPING
       - name: Publish Artifact
         uses: actions/upload-artifact@v4.3.4
         with:
@@ -65,14 +64,13 @@ jobs:
           haxelib setup C:/haxelib
           haxelib install hmm --quiet
           haxelib run hmm install --quiet
-        shell: cmd
       - name: Skip SScript setup mode
         run: echo 'oy9:showMacroty8:loopCosti25y10:includeAllfg' >> %USERPROFILE%/settings.cocoa
         shell: cmd
       - name: Create Version Tag
         run: echo "${{github.run_id}}" > VERSION
       - name: Compile
-        run: haxelib run lime build windows --app-version="4.0.0-${{ github.run_id}}" -DFEATURE_STAGE_EDITOR -DFEATURE_GHOST_TAPPING
+        run: haxelib run lime build windows -DFEATURE_STAGE_EDITOR -DFEATURE_GHOST_TAPPING
       - name: Publish Artifact
         uses: actions/upload-artifact@v4.3.4
         with:
@@ -100,7 +98,7 @@ jobs:
       - name: Create Version Tag
         run: echo "${{github.run_id}}" > VERSION
       - name: Compile
-        run: haxelib run lime build mac --app-version="4.0.0-${{ github.run_id}}" -DFEATURE_STAGE_EDITOR -DFEATURE_GHOST_TAPPING
+        run: haxelib run lime build mac -DFEATURE_STAGE_EDITOR -DFEATURE_GHOST_TAPPING
       - name: Publish Artifact
         uses: actions/upload-artifact@v4.3.4
         with:
