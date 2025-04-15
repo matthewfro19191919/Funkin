@@ -37,6 +37,9 @@ jobs:
           haxelib setup ~/haxelib
           haxelib install hmm --quiet
           haxelib run hmm install --quiet
+      - name: get game assets
+        run: |
+           git submodule update --init --recursive
       - name: Skip SScript setup mode
         run: echo 'oy9:showMacroty8:loopCosti25y10:includeAllfg' >> ~/settings.cocoa
       - name: Create Version Tag
@@ -64,6 +67,9 @@ jobs:
           haxelib setup C:/haxelib
           haxelib install hmm --quiet
           haxelib run hmm install --quiet
+      - name: get game assets
+        run: |
+           git submodule update --init --recursive
       - name: Skip SScript setup mode
         run: echo 'oy9:showMacroty8:loopCosti25y10:includeAllfg' >> %USERPROFILE%/settings.cocoa
         shell: cmd
@@ -93,6 +99,9 @@ jobs:
           haxelib install hxcpp > /dev/null --quiet
           haxelib install hmm --quiet
           haxelib run hmm install --quiet
+      - name: get game assets
+        run: |
+           git submodule update --init --recursive
       - name: Skip SScript setup mode
         run: echo 'oy9:showMacroty8:loopCosti25y10:includeAllfg' >> ~/settings.cocoa
       - name: Create Version Tag
