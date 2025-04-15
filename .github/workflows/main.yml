@@ -45,7 +45,7 @@ jobs:
       - name: Create Version Tag
         run: echo "${{github.run_id}}" > VERSION
       - name: Compile
-        run: haxelib run lime build linux -DFEATURE_STAGE_EDITOR -DFEATURE_GHOST_TAPPING
+        run: haxelib run lime build linux -DFEATURE_STAGE_EDITOR -DFEATURE_GHOST_TAPPING -y
       - name: Publish Artifact
         uses: actions/upload-artifact@v4
         with:
@@ -76,7 +76,7 @@ jobs:
       - name: Create Version Tag
         run: echo "${{github.run_id}}" > VERSION
       - name: Compile
-        run: haxelib run lime build windows -DFEATURE_STAGE_EDITOR -DFEATURE_GHOST_TAPPING
+        run: haxelib run lime build windows -DFEATURE_STAGE_EDITOR -DFEATURE_GHOST_TAPPING -y
       - name: Publish Artifact
         uses: actions/upload-artifact@v4
         with:
@@ -107,7 +107,7 @@ jobs:
       - name: Create Version Tag
         run: echo "${{github.run_id}}" > VERSION
       - name: Compile
-        run: haxelib run lime build mac -DFEATURE_STAGE_EDITOR -DFEATURE_GHOST_TAPPING
+        run: haxelib run lime build mac -DFEATURE_STAGE_EDITOR -DFEATURE_GHOST_TAPPING -y
       - name: Publish Artifact
         uses: actions/upload-artifact@v4
         with:
