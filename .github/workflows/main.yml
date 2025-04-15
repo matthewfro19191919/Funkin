@@ -28,7 +28,7 @@ jobs:
 
       - uses: krdlab/setup-haxe@master
         with:
-          haxe-version: 4.3.4
+          haxe-version: 4.3.6
       # Runs a set of commands using the runners shell
       - name: Install Haxelib
         run: |
@@ -44,7 +44,7 @@ jobs:
       - name: Compile
         run: haxelib run lime build Project.xml linux -DFEATURE_STAGE_EDITOR -DFEATURE_GHOST_TAPPING
       - name: Publish Artifact
-        uses: actions/upload-artifact@v4.3.4
+        uses: actions/upload-artifact@v4
         with:
           name: linuxBuild
           path: 'export/release/linux/bin'
@@ -57,7 +57,7 @@ jobs:
 
       - uses: krdlab/setup-haxe@master
         with:
-          haxe-version: 4.3.4
+          haxe-version: 4.3.6
       # Runs a set of commands using the runners shell
       - name: Install Haxelib
         run: |
@@ -72,7 +72,7 @@ jobs:
       - name: Compile
         run: haxelib run lime build windows -DFEATURE_STAGE_EDITOR -DFEATURE_GHOST_TAPPING
       - name: Publish Artifact
-        uses: actions/upload-artifact@v4.3.4
+        uses: actions/upload-artifact@v4
         with:
           name: windowsBuild
           path: export/release/windows/bin
@@ -85,7 +85,7 @@ jobs:
 
       - uses: krdlab/setup-haxe@master
         with:
-          haxe-version: 4.3.4
+          haxe-version: 4.3.6
       # Runs a set of commands using the runners shell
       - name: Install Haxelib
         run: |
@@ -100,7 +100,7 @@ jobs:
       - name: Compile
         run: haxelib run lime build mac -DFEATURE_STAGE_EDITOR -DFEATURE_GHOST_TAPPING
       - name: Publish Artifact
-        uses: actions/upload-artifact@v4.3.4
+        uses: actions/upload-artifact@v4
         with:
           name: macBuild
           path: export/release/macos/bin
