@@ -37,7 +37,7 @@ jobs:
           haxelib setup ~/haxelib
           haxelib install hmm --quiet
           haxelib run hmm install --quiet
-      - name: get game assets
+      - name: Get Game Assets
         run: |
            git submodule update --init --recursive
       - name: Skip SScript setup mode
@@ -67,7 +67,7 @@ jobs:
           haxelib setup C:/haxelib
           haxelib install hmm --quiet
           haxelib run hmm install --quiet
-      - name: get game assets
+      - name: Get Game Assets
         run: |
            git submodule update --init --recursive
       - name: Skip SScript setup mode
@@ -99,7 +99,7 @@ jobs:
           haxelib install hxcpp > /dev/null --quiet
           haxelib install hmm --quiet
           haxelib run hmm install --quiet
-      - name: get game assets
+      - name: Get Game Assets
         run: |
            git submodule update --init --recursive
       - name: Skip SScript setup mode
