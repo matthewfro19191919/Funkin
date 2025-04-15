@@ -38,6 +38,7 @@ jobs:
           haxelib --global install hmm
           haxelib --global run hmm setup
           hmm install
+          haxelib run lime setup
           sh ./setup/unix.sh
       - name: Skip SScript setup mode
         run: echo 'oy9:showMacroty8:loopCosti25y10:includeAllfg' >> ~/settings.cocoa
@@ -67,6 +68,7 @@ jobs:
           haxelib --global install hmm
           haxelib --global run hmm setup
           hmm install
+          haxelib run lime setup
         shell: cmd
       - name: Skip SScript setup mode
         run: echo 'oy9:showMacroty8:loopCosti25y10:includeAllfg' >> %USERPROFILE%/settings.cocoa
@@ -98,6 +100,7 @@ jobs:
           haxelib --global install hmm
           haxelib --global run hmm setup
           hmm install
+          haxelib run lime setup
       - name: Skip SScript setup mode
         run: echo 'oy9:showMacroty8:loopCosti25y10:includeAllfg' >> ~/settings.cocoa
       - name: Create Version Tag
